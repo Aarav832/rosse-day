@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooming Love - Rose Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>🌹 Happy Rose Day, My Love! 🌹</h1>
+        
+        <div class="rose-container" onclick="showSecretMessage()">
+            <div class="rose">🌹</div>
+        </div>
+
+        <div class="quote-container">
+            <p id="quote"></p>
+        </div>
+
+        <button onclick="createFlowerStorm()">Create Flower Storm! 🌸</button>
+        <button onclick="showPersonalMessage()">Personal Message 💌</button>
+
+        <div class="petals"></div>
+    </div>
+
+    <div id="secretMessage" class="hidden-message">
+        <h2>You're My Always 🌟</h2>
+        <p>Every petal whispers my love for you...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

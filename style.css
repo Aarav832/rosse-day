@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    font-family: 'Pacifico', cursive;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin: 20px 0;
+}
+
+.rose-container {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.rose {
+    font-size: 100px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.quote-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#quote {
+    font-size: 1.5em;
+    color: #ff1493;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.petals {
+    position: fixed;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+.petal {
+    position: absolute;
+    color: #fff;
+    animation: fall linear forwards;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+button {
+    background: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-family: inherit;
+    font-size: 1.2em;
+    color: #ff1493;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.hidden-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
